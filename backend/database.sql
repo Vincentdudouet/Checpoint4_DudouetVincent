@@ -23,31 +23,51 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Structure de la table `item`
+-- Structure de la table `users`
 --
 
-CREATE TABLE `item` (
-  `id` int(11) UNSIGNED NOT NULL,
-  `title` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+CREATE TABLE
+  users (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    lastname VARCHAR(255) NOT NULL,
+    firstname VARCHAR(255) NOT NULL,
+    age VARCHAR(255) NOT NULL,
+    job VARCHAR(100)NOT NULL,
+    description TEXT NOT NULL,
+    email VARCHAR(255) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL,
+    imgLink VARCHAR(255) DEFAULT NULL
+  );
 
 --
--- Contenu de la table `item`
+-- Contenu de la table `projects`
 --
 
-INSERT INTO `item` (`id`, `title`) VALUES
-(1, 'Stuff'),
-(2, 'Doodads');
+CREATE TABLE
+  projects (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    title VARCHAR(155) NOT NULL,
+    description VARCHAR(255) NOT NULL,
+    date DATETIME
+  );
 
 --
--- Index pour les tables exportées
+-- Contenu de la table `images`
+CREATE TABLE 
+images(
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  alt TINYTEXT NOT NULL,
+  imgLink VARCHAR(255) NOT NULL,
+  projects_id INT NULL,
+  users_id INT NULL
+); 
+ 
 --
 
 --
 -- Index pour la table `item`
 --
-ALTER TABLE `item`
-  ADD PRIMARY KEY (`id`);
+
 
 --
 -- AUTO_INCREMENT pour les tables exportées
@@ -55,9 +75,6 @@ ALTER TABLE `item`
 
 --
 -- AUTO_INCREMENT pour la table `item`
---
-ALTER TABLE `item`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
