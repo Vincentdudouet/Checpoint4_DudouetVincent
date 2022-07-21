@@ -1,0 +1,39 @@
+.aboutMe {
+  margin-top: auto;
+  margin-bottom: auto;
+  width: 50%;
+}
+
+.aboutMe-li {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  letter-spacing: 2px;
+  line-height: 2rem;
+  padding: 1rem;
+}
+
+.aboutMe-ul {
+  text-align: center;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+@media (max-width: 1076px) {
+  .aboutMe {
+    width: 65%;
+  }
+
+  .aboutMe-li {
+    line-height: 1.5rem;
+  }
+}
+@media (max-width: 725px) {
+  .aboutMe {
+    width: 95%;
+  }
+  .aboutMe-li {
+    line-height: 1rem;
+    letter-spacing: 0;
+  }
+}

@@ -12,16 +12,16 @@ router.get("/", ProjectsController.browse);
 router.get("/:id", ProjectsController.read);
 router.put(
   "/:id",
-  UsersController.login,
+
   ImagesController.uploadProject,
   ProjectsController.edit
 );
 router.post(
   "/",
-  UsersController.login,
+
   ImagesController.uploadProject,
   ProjectsController.add
 );
-router.delete("/:id", UsersController.login, ProjectsController.delete);
+router.delete("/:id", ProjectsController.delete);
 
 module.exports = router;

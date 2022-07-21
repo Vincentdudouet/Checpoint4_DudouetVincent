@@ -23,14 +23,24 @@ function AboutMe() {
     getUsers();
   }, []);
   return (
-    <section>
+    <section className="aboutMe">
       {users.length ? (
         <ul>
           {users.map((user) => (
-            <li key={user.id}>
-              {user.firstname} - {user.lastname} - {user.age}ans - {user.job} -
-              {user.description}
-            </li>
+            <div className="aboutMe-ul">
+              <li className="aboutMe-li" key={user.id}>
+                {user.firstname} - {user.lastname}
+              </li>
+              <li className="aboutMe-li" key={user.id}>
+                {user.age}ans
+              </li>
+              <li className="aboutMe-li" key={user.id}>
+                {user.job}
+              </li>
+              <li className="aboutMe-li" key={user.id}>
+                {user.description}
+              </li>
+            </div>
           ))}
         </ul>
       ) : (
