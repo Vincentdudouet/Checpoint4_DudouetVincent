@@ -1,16 +1,16 @@
+/* eslint-disable react/prop-types */
 import "../styles/login.scss";
 import { useState } from "react";
 import axios from "@services/axios";
-import { Link } from "react-router-dom";
 
-export default function Login() {
+export default function Login({ setLogin, login }) {
   const [user, setUser] = useState({
     email: "",
     password: "",
   });
-  const [login, setLogin] = useState(false);
+
   const handleClick = () => {
-    setLogin(!login);
+    setLogin((prevState) => !prevState);
   };
 
   const handleInput = (e) => {
@@ -50,10 +50,6 @@ export default function Login() {
   return (
     <form className="fields">
       <nav className="navBar">
-        {login && (
-          <input className="searchBar" type="text" placeholder="Search" />
-        )}
-
         {!login && (
           <>
             <input

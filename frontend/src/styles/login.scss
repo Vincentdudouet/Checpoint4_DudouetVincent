@@ -1,25 +1,23 @@
 nav {
   height: 3.5rem;
-  background-color: #e89759;
+  background-color: radial-gradient(
+    circle,
+    rgba(72, 178, 223, 1) 20%,
+    rgba(50, 44, 133, 1) 51%,
+    rgba(82, 19, 139, 1) 88%
+  );
   /* border-bottom: thick double #183650; */
   border-bottom: double 1px #183650;
-}
-.logo {
-  cursor: pointer;
-  height: 2rem;
-  display: flex;
-  margin-top: 0.6rem;
-  padding-left: 1rem;
 }
 
 .navBar {
   width: 100vw;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .fields {
-  width: 100%;
+  width: 70%;
   display: flex;
   justify-content: space-between;
 }
@@ -86,7 +84,7 @@ nav {
 
 /* barre de recherche  */
 .email {
-  width: 15%;
+  width: 25%;
   border-radius: 5px;
   height: 1.5rem;
   margin-top: 0.7rem;
@@ -94,7 +92,7 @@ nav {
 
 /* barre de recherche  */
 .password {
-  width: 15%;
+  width: 25%;
   border-radius: 5px;
   height: 1.5rem;
   margin-top: 0.7rem;
@@ -109,14 +107,14 @@ nav {
 
   /* barre de recherche  */
   .email {
-    width: 15%;
+    width: 25%;
     height: 1.5rem;
     margin-top: 0.7rem;
   }
 
   /* barre de recherche  */
   .password {
-    width: 15%;
+    width: 25%;
     height: 1.5rem;
     margin-top: 0.7rem;
   }

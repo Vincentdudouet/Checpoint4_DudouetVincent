@@ -1,7 +1,14 @@
-.aboutMe {
+.aboutMee {
   margin-top: auto;
   margin-bottom: auto;
   width: 50%;
+  text-align: center;
+}
+.image-me {
+  width: 15rem;
+  margin-top: 1rem;
+  text-align: left;
+  border-radius: 50px;
 }
 
 .aboutMe-li {
@@ -10,7 +17,7 @@
   justify-content: space-between;
   letter-spacing: 2px;
   line-height: 2rem;
-  padding: 1rem;
+  padding: 0.5rem;
 }
 
 .aboutMe-ul {
@@ -20,7 +27,7 @@
 }
 
 @media (max-width: 1076px) {
-  .aboutMe {
+  .aboutMee {
     width: 65%;
   }
 
@@ -29,7 +36,7 @@
   }
 }
 @media (max-width: 725px) {
-  .aboutMe {
+  .aboutMee {
     width: 95%;
   }
   .aboutMe-li {

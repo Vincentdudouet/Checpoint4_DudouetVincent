@@ -23,11 +23,12 @@ function AboutMe() {
     getUsers();
   }, []);
   return (
-    <section className="aboutMe">
+    <section className="aboutMee">
+      <img className="image-me" alt="me" src=".././src/assets/profil(2).jpg" />
       {users.length ? (
         <ul>
           {users.map((user) => (
-            <div className="aboutMe-ul">
+            <div className="aboutMe">
               <li className="aboutMe-li" key={user.id}>
                 {user.firstname} - {user.lastname}
               </li>
