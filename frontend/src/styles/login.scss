@@ -1,0 +1,121 @@
+nav {
+  height: 3.5rem;
+  background-color: radial-gradient(
+    circle,
+    rgba(72, 178, 223, 1) 20%,
+    rgba(50, 44, 133, 1) 51%,
+    rgba(82, 19, 139, 1) 88%
+  );
+  /* border-bottom: thick double #183650; */
+  border-bottom: double 1px #183650;
+}
+
+.navBar {
+  width: 100vw;
+  display: flex;
+  justify-content: space-around;
+}
+
+.fields {
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+}
+/* button connect  */
+
+/* CSS */
+.connect {
+  margin: 0.4rem;
+  margin-right: 1rem;
+  background: #183650;
+  border: 1px solid #183650;
+  border-radius: 4px;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  direction: ltr;
+  display: block;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 17px;
+  font-weight: 400;
+  letter-spacing: -0.022em;
+  line-height: 1.47059;
+  min-width: 30px;
+  overflow: visible;
+  padding: 4px 15px;
+  text-align: center;
+  vertical-align: baseline;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+}
+
+.connect:disabled {
+  cursor: default;
+  opacity: 0.3;
+}
+
+.connect:hover {
+  background-image: linear-gradient(#147bcd, #183650);
+  border-color: #183650;
+  text-decoration: none;
+}
+
+.connect:active {
+  background-image: linear-gradient(#0067b9, #183650);
+  border-color: #183650;
+  outline: none;
+}
+
+.connect:focus {
+  box-shadow: rgba(131, 192, 253, 0.5) 0 0 0 3px;
+  outline: none;
+}
+
+/* barre de recherche  */
+.searchBar {
+  width: 25%;
+  border-radius: 5px;
+  height: 1.5rem;
+  margin-top: 0.7rem;
+  align-items: center;
+}
+
+/* barre de recherche  */
+.email {
+  width: 25%;
+  border-radius: 5px;
+  height: 1.5rem;
+  margin-top: 0.7rem;
+}
+
+/* barre de recherche  */
+.password {
+  width: 25%;
+  border-radius: 5px;
+  height: 1.5rem;
+  margin-top: 0.7rem;
+}
+
+@media screen and (max-width: 900px) {
+  .searchBar {
+    width: 15%;
+    height: 1.5rem;
+    margin-top: 0.7rem;
+  }
+
+  /* barre de recherche  */
+  .email {
+    width: 25%;
+    height: 1.5rem;
+    margin-top: 0.7rem;
+  }
+
+  /* barre de recherche  */
+  .password {
+    width: 25%;
+    height: 1.5rem;
+    margin-top: 0.7rem;
+  }
+}

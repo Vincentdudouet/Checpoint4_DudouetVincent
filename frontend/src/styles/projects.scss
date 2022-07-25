@@ -1,0 +1,65 @@
+.project-ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #a2bef3;
+  opacity: 0.51;
+  margin: 3rem;
+  width: 30rem;
+  height: 30rem;
+  border-radius: 15px;
+  box-shadow: 10px 10px 10px 10px #a2bef3;
+  text-align: center;
+}
+img.img-project {
+  object-fit: cover;
+  width: 15rem;
+}
+.project-li {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  letter-spacing: 1px;
+  line-height: 1rem;
+  padding: 1rem;
+}
+.delete-button {
+  width: 2rem;
+  height: 2rem;
+}
+
+.project-display {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.add-projet-container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  h1 {
+    text-align: center;
+  }
+}
+
+@media (max-width: 500px) {
+  .project-ul {
+    width: 15rem;
+    height: 20rem;
+  }
+
+  img.img-project {
+    object-fit: cover;
+    width: 8rem;
+  }
+
+  .project-li {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    letter-spacing: 0;
+    line-height: 1rem;
+    padding: 0.2em;
+  }
+}
