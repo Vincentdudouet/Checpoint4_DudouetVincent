@@ -11,17 +11,33 @@ const deleteImage = (pathImage) => {
 };
 
 class ProjectsController {
-  static browse = (req, res) => {
-    models.projects
-      .findAll()
-      .then(([rows]) => {
-        console.log(rows);
-        res.send(rows);
-      })
-      .catch((err) => {
-        console.error(err);
-        res.sendStatus(500);
+  static browse = async (req, res) => {
+    try {
+      const [projects] = await models.projects.findProjectImages();
+
+      if (!projects) {
+        return res.status(404).send("error");
+      }
+      return res.status(200).send(projects);
+    } catch (err) {
+      return res.status(500).send(err);
+    }
+  };
+
+  static ProjectImages = async (req, res) => {
+    try {
+      const [projects] = await models.projects.findAll();
+      console.log(projects);
+      await projects.forEach((image) => {
+        if (image.project_id === true) {
+          image.project_id = "";
+        }
+        return project;
       });
+      return res.status(200).send(projects);
+    } catch (err) {
+      return res.status(500).send(err);
+    }
   };
 
   static read = (req, res) => {
@@ -188,7 +204,7 @@ class ProjectsController {
         ? files.map((file) => {
             return {
               imgLink: file.filename,
-              project_id: newProject.insertId,
+              projects_id: newProject.insertId,
               alt: file.originalname,
             };
           })

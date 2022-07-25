@@ -20,8 +20,12 @@ app.use(cookieParser());
 
 app.use(express.json());
 
+app.use(
+  "/public/images/projects",
+  express.static(path.join(__dirname, "../public/assets/images/projects"))
+);
 // Serve the public folder for public resources
-app.use(express.static(path.join(__dirname, "../public")));
+app.use("/public", express.static(path.join(__dirname, "../public")));
 
 // Serve REACT APP
 app.use(express.static(path.join(__dirname, "..", "..", "frontend", "dist")));

@@ -7,6 +7,15 @@
   margin-top: auto;
   margin-bottom: auto;
 }
+.precedent {
+  background-color: #a2bef3;
+  width: 3rem;
+  height: 3rem;
+  margin-top: 50;
+}
+.button-welcome {
+  width: 2rem;
+}
 
 .projets {
   width: 25rem;
@@ -41,9 +50,52 @@
 }
 
 .project-real {
-  margin-top: 58%;
+  margin-top: 62%;
 }
 
 .discover-me {
   margin-top: 63%;
+}
+
+@media (max-width: 970px) {
+  .About-me {
+    width: 45%;
+    margin-left: 10%;
+  }
+  .projets {
+    width: 45%;
+    margin-right: 10%;
+  }
+  .project-real {
+    margin-top: 94%;
+  }
+
+  .discover-me {
+    margin-top: 98%;
+  }
+}
+@media (max-width: 688px) {
+  .welcome-box {
+    justify-content: space-around;
+    text-align: center;
+  }
+  .About-me {
+    width: 30%;
+    height: 15rem;
+
+    margin-left: 0;
+  }
+  .projets {
+    width: 30%;
+    height: 15rem;
+
+    margin-right: 0;
+  }
+  .project-real {
+    margin-top: 57%;
+  }
+
+  .discover-me {
+    margin-top: 70%;
+  }
 }

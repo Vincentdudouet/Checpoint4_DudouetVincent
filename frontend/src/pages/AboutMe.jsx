@@ -23,14 +23,25 @@ function AboutMe() {
     getUsers();
   }, []);
   return (
-    <section>
+    <section className="aboutMee">
+      <img className="image-me" alt="me" src=".././src/assets/profil(2).jpg" />
       {users.length ? (
         <ul>
           {users.map((user) => (
-            <li key={user.id}>
-              {user.firstname} - {user.lastname} - {user.age}ans - {user.job} -
-              {user.description}
-            </li>
+            <div className="aboutMe">
+              <li className="aboutMe-li" key={user.id}>
+                {user.firstname} - {user.lastname}
+              </li>
+              <li className="aboutMe-li" key={user.id}>
+                {user.age}ans
+              </li>
+              <li className="aboutMe-li" key={user.id}>
+                {user.job}
+              </li>
+              <li className="aboutMe-li" key={user.id}>
+                {user.description}
+              </li>
+            </div>
           ))}
         </ul>
       ) : (

@@ -1,0 +1,46 @@
+.aboutMee {
+  margin-top: auto;
+  margin-bottom: auto;
+  width: 50%;
+  text-align: center;
+}
+.image-me {
+  width: 15rem;
+  margin-top: 1rem;
+  text-align: left;
+  border-radius: 50px;
+}
+
+.aboutMe-li {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  letter-spacing: 2px;
+  line-height: 2rem;
+  padding: 0.5rem;
+}
+
+.aboutMe-ul {
+  text-align: center;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+@media (max-width: 1076px) {
+  .aboutMee {
+    width: 65%;
+  }
+
+  .aboutMe-li {
+    line-height: 1.5rem;
+  }
+}
+@media (max-width: 725px) {
+  .aboutMee {
+    width: 95%;
+  }
+  .aboutMe-li {
+    line-height: 1rem;
+    letter-spacing: 0;
+  }
+}

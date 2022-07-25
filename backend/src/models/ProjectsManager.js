@@ -8,6 +8,12 @@ class ProjectsManager extends AbstractManager {
     return this.connection.query(`SELECT * FROM  ${ProjectsManager.table}`);
   }
 
+  findProjectImages() {
+    return this.connection
+      .query(`SELECT p.id, p.title, p.description, i.id AS imageId, i.imgLink, i.alt From ${ProjectsManager.table} As p JOIN
+    images AS i on p.id=i.projects_id`);
+  }
+
   findById(projectId) {
     return this.connection.query(
       `SELECT * FROM ${ProjectsManager.table} WHERE id = ?`,
